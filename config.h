@@ -67,6 +67,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = launchcmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_o,      spawn,          {.v = bookmarkcmd } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock")},
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
