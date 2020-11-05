@@ -62,6 +62,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *launchcmd[]  = { "fzflaunch", NULL };
 static const char *bookmarkcmd[]  = { "fzfbookmarks", NULL };
 static const char *taskscmd[]  = { "taskp", NULL };
+static const char *notescmd[]  = { "notesp", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -69,6 +70,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_o,      spawn,          {.v = bookmarkcmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = taskscmd } },
+	{ MODKEY,                       XK_n,      spawn,          {.v = notescmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock")},
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
