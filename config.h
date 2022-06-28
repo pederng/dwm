@@ -26,10 +26,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     iscentered     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            0,             1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,             0,           -1 },
-	{ "fzfmenu",  NULL,       NULL,       0,            1,             1,           -1 },
+	/* class         instance    title       tags mask     iscentered     isfloating   monitor */
+	{ "Gimp",        NULL,       NULL,       0,            0,             1,           -1 },
+	{ "Firefox",     NULL,       NULL,       1 << 8,       0,             0,           -1 },
+	{ "fzfmenu",     NULL,       NULL,       0,            1,             1,           -1 },
+	{ "QjackCtl",    NULL,       NULL,       0,            1,             1,           -1 },
+	{ "FLTK",        NULL,       NULL,       0,            1,             1,           -1 },
+	{ "pinentry-qt", NULL,       NULL,       0,            1,             1,           -1 },
 };
 
 /* layout(s) */
@@ -82,7 +85,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
